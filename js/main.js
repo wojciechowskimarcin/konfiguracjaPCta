@@ -49,6 +49,12 @@ const mb = [
         price: 549,
         producent: "MSI",
     },
+    {
+        id: 6,
+        name: "Płyta główna Gigabyte B-550",
+        price: 449,
+        producent: "Gigabyte",
+    },
 ]
 
 const cpu = [
