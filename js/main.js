@@ -51,10 +51,16 @@ const mb = [
     },
     {
         id: 6,
-        name: "Płyta główna Gigabyte B-550",
+        name: "Gigabyte B-550",
         price: 449,
         producent: "Gigabyte",
     },
+    {
+        id:7,
+        name: "Gigabyte C-660",
+        price: 649,
+        producent: "Gigabyte",
+    }
 ]
 
 const cpu = [
