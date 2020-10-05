@@ -43,6 +43,12 @@ const mb = [
         price: 259,
         producent: "Arock",
     },
+    {
+        id: 5,
+        name: "Płyta główna MSI Z390-A PRO",
+        price: 549,
+        producent: "MSI",
+    },
 ]
 
 const cpu = [
