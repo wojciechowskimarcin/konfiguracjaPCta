@@ -25,9 +25,18 @@ table#summaryComp td
 {
     border:1px solid white;
     border-collapse: collapse;
+    padding:5px;
 }
 
 #summaryComp img {
     width:200px;
     height: auto;
+}
+
+#sumAll{
+    width:200px;
+    background-color: yellow;
+    font-size: 1.22em;
+    padding:10px;
+    color:black
 }

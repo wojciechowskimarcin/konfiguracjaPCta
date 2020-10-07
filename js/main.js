@@ -30,6 +30,7 @@ const mb = [
         name: "Gigabyte X570 GAMING X",
         price: 769,
         producent: "Gigabyte",
+        img: "GIGABYTE_X570_GAMING.jpg"
     },
     {
         id: 3,
@@ -107,7 +108,7 @@ var cart = [
         price:0
     },
 ]
-
+document.getElementById("sumAll").innerHTML="<b>Suma koszyka:"+ (cart[0].price+cart[1].price+cart[2].price)+"zł</b>"
 function addOpt(elem, optValue, textOpt) {
     let select1 = document.getElementById(elem); // pobranie id miejsca do dodania opcji
     option = document.createElement("option"); // utworzenie elementu option
@@ -128,19 +129,19 @@ function SelectedItemValue(SelectId){
 
 
     if (SelectId == "cpu") {
-        summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt - 1].img+"'></td>"+"<td>"+cpu[strAtt - 1].name + "</td><td>" + cpu[strAtt - 1].price+"</td>"
+        summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt - 1].img+"'></td>"+"<td>"+cpu[strAtt - 1].name + "</td><td>" + cpu[strAtt - 1].price+"zł</td>"
         cart[2].price = cpu[strAtt - 1].price
         cart[2].name = cpu[strAtt - 1].name
 
     }
     else if (SelectId == "mb") {
-        summaryMb.innerHTML = "<td>"+mb[strAtt - 1].name + "</td><td>"+ cpu[strAtt - 1].price+ "</td>";
+        summaryMb.innerHTML = "<td><img src='img/"+mb[strAtt - 1].img+"'></td>"+"<td>"+mb[strAtt - 1].name + "</td><td>"+ cpu[strAtt - 1].price+ "zł</td>";
         cart[0].price = mb[strAtt - 1].price
         cart[0].name = mb[strAtt - 1].name
         //document.getElementById("summaryMainboard").innerHTML="mainboard:"+cart[0].name+ " "+cart[0].price;
     }
     else if (SelectId == "gpu") {
-        summaryGfx.innerHTML = "<td>"+gfx[strAtt - 1].name + "</td><td>"+ gfx[strAtt - 1].price+ "</td>";
+        summaryGfx.innerHTML = "<td><img src='img/"+gfx[strAtt - 1].img+"'></td>"+"<td>"+gfx[strAtt - 1].name + "</td><td>"+ gfx[strAtt - 1].price+ "zł</td>";
         cart[1].price =gfx[strAtt - 1].price
         cart[1].name = gfx[strAtt - 1].name
     }
@@ -148,7 +149,7 @@ function SelectedItemValue(SelectId){
     {}
 
 
-    document.getElementById("sumAll").innerHTML="<b>Suma koszyka:"+ (cart[0].price+cart[1].price+cart[2].price)+"</b>"
+    document.getElementById("sumAll").innerHTML="<b>Suma koszyka:"+ (cart[0].price+cart[1].price+cart[2].price)+"zł</b>"
 
     //return(parseInt(strAtt));
 }
