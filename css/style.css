@@ -15,3 +15,19 @@ body{
     margin-bottom: 5px;
 
 }
+
+table#summaryComp {
+    width: 70%;
+}
+
+table#summaryComp,
+table#summaryComp td
+{
+    border:1px solid white;
+    border-collapse: collapse;
+}
+
+#summaryComp img {
+    width:200px;
+    height: auto;
+}

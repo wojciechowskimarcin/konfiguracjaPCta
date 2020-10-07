@@ -69,18 +69,21 @@ const cpu = [
         name: "Intel Core i5-10400F, 2.9GHz, 12 MB, BOX",
         price: 699,
         producent: "Intel",
+        img: "Intel-Core i5-10400F.jpg"
     },
     {
         id: 2,
         name: "AMD Ryzen 5 3600, 3.6GHz, 32 MB, BOX",
         price: 929,
         producent: "AMD",
+        img:"AMD-Ryzen-5-3600.jpg"
     },
     {
         id: 3,
         name: "Core i9-10850K, 3.6GHz, 20 MB, BOX",
         price: 2139,
         producent: "Intel",
+        img:"Core-i9-10850KX.jpg"
     },
     {
         id: 4,
@@ -125,19 +128,19 @@ function SelectedItemValue(SelectId){
 
 
     if (SelectId == "cpu") {
-        summaryCPU.innerHTML = cpu[strAtt - 1].name + " " + cpu[strAtt - 1].price
+        summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt - 1].img+"'></td>"+"<td>"+cpu[strAtt - 1].name + "</td><td>" + cpu[strAtt - 1].price+"</td>"
         cart[2].price = cpu[strAtt - 1].price
         cart[2].name = cpu[strAtt - 1].name
 
     }
     else if (SelectId == "mb") {
-        summaryMb.innerHTML = mb[strAtt - 1].name + " " + cpu[strAtt - 1].price
+        summaryMb.innerHTML = "<td>"+mb[strAtt - 1].name + "</td><td>"+ cpu[strAtt - 1].price+ "</td>";
         cart[0].price = mb[strAtt - 1].price
         cart[0].name = mb[strAtt - 1].name
         //document.getElementById("summaryMainboard").innerHTML="mainboard:"+cart[0].name+ " "+cart[0].price;
     }
     else if (SelectId == "gpu") {
-        summaryGfx.innerHTML = gfx[strAtt - 1].name + " " + gfx[strAtt - 1].price
+        summaryGfx.innerHTML = "<td>"+gfx[strAtt - 1].name + "</td><td>"+ gfx[strAtt - 1].price+ "</td>";
         cart[1].price =gfx[strAtt - 1].price
         cart[1].name = gfx[strAtt - 1].name
     }
